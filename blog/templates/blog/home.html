@@ -14,7 +14,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
-    
 
     
 
@@ -81,6 +80,23 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      .hero__media-container {
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+      }
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+      
     </style>
 
     
@@ -98,7 +114,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
@@ -118,17 +134,31 @@
 
 <main>
 
+  <div class="hero__media hero__media--template--15712579485877__165834677779c5211c">
+    <div class="hero__media-container"><video
+          id="Mp4Video-template--15712579485877__165834677779c5211c"
+          class="video-div"
+          data-type="mp4"
+          src="https://cdn.shopify.com/videos/c/o/v/f06b57a259fe40cd9cbf4c229e89771e.mp4"
+          loop muted playsinline autoplay></video></div>
+  </div>
+
   <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">-- Portfolio -- </h1>
-        <p class="lead text-muted">Underneath is a list of projects showcasing work I have completed in my journey to becoming a developer </p>
-        <p>
-          <a href="" class="btn btn-outline-primary my-2">Instagram</a>
-          <a href="https://github.com/AaronOlayvar" target="_blank" class="btn btn-outline-primary my-2">Github</a>
-          <a href="mailto:trixolayvar@gmail.com" class="btn btn-outline-primary my-2">Email me</a>
-        </p>
-      </div>
+    <div class="hero-text">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <br>
+                <br>
+                <br>
+                <h1 class="fw-light text-white bold">-- Portfolio -- </h1>
+                <p class="lead text-white">Underneath is a list of projects showcasing work I have completed in my journey to becoming a developer </p>
+                <p>
+                <a href="" class="btn btn-primary my-2">Instagram</a>
+                <a href="https://github.com/AaronOlayvar" target="_blank" class="btn btn-primary my-2">Github</a>
+                <a href="https://www.linkedin.com/in/aaron-olayvar-028351147/" target="_blank" class="btn btn-primary my-2">LinkedIn</a>
+                </p>
+            </div>
+        </div>
     </div>
   </section>
 
@@ -240,12 +270,14 @@
 </main>
 
 <footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-  </div>
-</footer>
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">Contact me:</p>
+      <p class="mb-0"><a href="Mailto:trixolayvar@gmail.com">Email</p>
+    </div>
+  </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
