@@ -1,6 +1,10 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
+{% for post in posts.all %}
+{{ posts.title }}
+{% endfor %}
+
 {% block content %}
       <section class="py-1 text-center container">
         <div class="text">
@@ -20,5 +24,6 @@
             <img src="{% static 'profile.JPG'%}" height="300"></img>
         </div>
       </section>
+
 
 {% endblock %}
