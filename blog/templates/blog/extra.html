@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<h1> embedded videos from instagram </h1>
+<main>
+    <h2>main video </h2>
+</main>
+
+<iframe src="{% static 'swimming turtle.mp4' %}" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" width="520" height="360" scrolling="no" ></iframe>
+
+{% endblock %}

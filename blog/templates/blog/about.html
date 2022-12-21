@@ -1,10 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
-{% for post in posts.all %}
-{{ posts.title }}
-{% endfor %}
-
 {% block content %}
       <section class="py-1 text-center container">
         <div class="text">
@@ -13,7 +9,7 @@
                     <h1 class="fw-light text-gray bold">Aaron Olayvar</h1>
                     <p class="lead text-muted">My name is Aaron Olayvar, I was coding as a hobby that tranformed into a passion. </p>
                     <p>
-                    <a href="" class="btn btn-primary my-2">Instagram</a>
+                    <a href="https://www.instagram.com/" target="_blank" class="btn btn-primary my-2">Instagram</a>
                     <a href="https://github.com/AaronOlayvar" target="_blank" class="btn btn-primary my-2">Github</a>
                     <a href="https://www.linkedin.com/in/aaron-olayvar-028351147/" target="_blank" class="btn btn-primary my-2">LinkedIn</a>
                     </p>

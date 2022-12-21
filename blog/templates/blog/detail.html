@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="py-1 text-center container flex">
+    <div class="text">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light text-gray bold">{{ post_detail.title }}</h1>
+                <p class="lead text-muted">{{ post_detail.bio }}</p>
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="{{ post_detail.image.url }}" height="300"></img>
+        <hr>
+        <a type="" class="btn btn-sm btn-outline-secondary float-end mb-1" href="{% url 'project' %}">Back to Projects</a>
+    </div>
+  </section>
+  
+
+{% endblock %}

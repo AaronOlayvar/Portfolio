@@ -1,0 +1,60 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+
+    <h1 class="display-4 fw-normal">Current project :</h1>
+    <p class="lead fw-normal">To see what project I am currently working on. <br> Click the instagram button below and find out. <br> </p>
+    <a class="btn btn-outline-secondary" href="https://www.instagram.com/" target="_blank">Instagram</a>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<div class="py-5">
+  <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for post in posts.all %}
+      
+      <div class="col">
+        <div>
+            <h3>{{post.title}} :</h3>
+        </div>
+        <br>
+        <div class="rounded-circle">
+          <img class="bd-placeholder-img rounded-circle" width="80%" height="200" src="{{ post.image.url }}"> </img>
+        
+          <div class="rounded-circle">
+            <p class="card-text">{{ post.bio }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                  <a type="" class="btn btn-sm btn-outline-secondary float-end mb-1" href="{% url 'detail' post_id=post.id %}">Explore</a>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+<div>
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="mb-1">Contact me:</p>
+      
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+                <li class="nav-link py-2 px-0 px-lg-2"><a href="mailto:trixolayvar@gmail.com">Email</p>
+                <li class="nav-link py-2 px-0 px-lg-2"><a href="">CV</p>
+            </ul>
+
+    </div>
+  </footer>
+</div>
+
+
+      
+{% endblock %}
